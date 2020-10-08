@@ -1,3 +1,11 @@
+
+toDo:
+complete forkless upgrade
+configure pallet presets
+
+
+
+
 # Substrate Node Template
 
 A new FRAME-based Substrate node, ready for hacking :rocket:
