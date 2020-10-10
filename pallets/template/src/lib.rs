@@ -17,12 +17,8 @@ mod tests;
 pub trait Trait: frame_system::Trait {
 	/// Because this pallet emits events, it depends on the runtime's definition of an event.
 	type Event: From<Event<Self>> + Into<<Self as frame_system::Trait>::Event>;
-	type Currency: ReservableCurrency<Self::AccountId>;
-	type ReservationFee: Get<<Self::Currency as Currency<Self::AccountId>>::Balance>;
-	type Slashed: OnUnbalanced<<Self::Currency as Currency<Self::AccountId>>::NegativeImbalance>;
-	type ForceOrigin: EnsureOrigin<Self::Origin>;
-	type MinLength: Get<usize>;
-	type MaxLength: Get<usize>;
+
+
 }
 
 // The pallet's runtime storage items.
@@ -107,6 +103,4 @@ decl_module! {
 		}
 	}
 }
-
-
 
